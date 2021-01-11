@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Cosarca_Roxana_Project.Models.OfficeViewModels.AppointmentGroup>
+@{
+    ViewData["Title"] = "Ordered Services Statistics";
+}
+<h2>Ordered Services Statistics</h2>
+<table>
+    <tr>
+        <th>
+            Appointment Date
+        </th>
+        <th>
+            Registered appointments
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppointmentDate)
+            </td>
+            <td>
+                @item.ServiceCount
+            </td>
+        </tr>
+    }
+</table>

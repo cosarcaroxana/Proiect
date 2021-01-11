@@ -1,0 +1,113 @@
+﻿@model Cosarca_Roxana_Project.Models.OfficeViewModels.DoctorIndexData
+@{
+    ViewData["Title"] = "Publishers";
+}
+<h2>Doctor</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Doctor Name</th>
+            <th>Specializare</th>
+            <th>Service</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Doctors)
+        {
+            string selectedRow = "";
+            if (item.ID == (int?)ViewData["DoctorID"])
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.DisplayFor(modelItem => item.DoctorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Specializare)
+                </td>
+
+                <td>
+                    @{
+                        foreach (var service in item.DoctorServices)
+                        {
+                            @service.Service.ID @: @service.Service.Title <br />
+                        }
+                    }
+                </td>
+                <td>
+                    <a asp-action="Index" asp-route-id="@item.ID">Select</a> |
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    @if (Model.Services != null)
+    {
+        <h3>Services by Selected Doctor</h3>
+        <table class="table">
+            <tr>
+                <th></th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            @foreach (var item in Model.Services)
+            {
+                string selectedRow = "";
+                if (item.ID == (int?)ViewData["ServiceID"])
+                {
+                    selectedRow = "success";
+                }
+                <tr class="@selectedRow">
+                    <td>
+                        @Html.ActionLink("Select", "Index", new { serviceID = item.ID })
+                    </td>
+                    <td>
+                        @item.Title
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                </tr>
+
+            }
+        </table>
+    }
+
+    @if (Model.Appointments != null)
+     {
+        <h3>
+            Appointments that have made for Selected Services
+        </h3>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Appointment Date</th>
+            </tr>
+            @foreach (var item in Model.Appointments)
+            {
+                <tr>
+                    <td>
+                        @item.Customer.Name
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AppointmentDate)
+                    </td>
+                </tr>
+            }
+        </table>
+     }
+
+
+
