@@ -1,0 +1,9 @@
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\bin\Debug\netcoreapp3.1\OfficeModel.deps.json
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\bin\Debug\netcoreapp3.1\OfficeModel.dll
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\bin\Debug\netcoreapp3.1\OfficeModel.pdb
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\obj\Debug\netcoreapp3.1\OfficeModel.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\obj\Debug\netcoreapp3.1\OfficeModel.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\obj\Debug\netcoreapp3.1\OfficeModel.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\obj\Debug\netcoreapp3.1\OfficeModel.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\obj\Debug\netcoreapp3.1\OfficeModel.dll
+C:\Users\Lenovo\Desktop\MediiAvansate\OfficeModel\obj\Debug\netcoreapp3.1\OfficeModel.pdb
